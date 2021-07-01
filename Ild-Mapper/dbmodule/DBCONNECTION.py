@@ -1,3 +1,4 @@
+from os import name
 import sqlite3
 from sqlite3 import Error
 import datetime
@@ -110,7 +111,7 @@ def external_request(mode, value_tuple):
         db_display_function(connection)
 
 
-def main():
+def db_create():
     dataBase = r"storage.db"
     conn = db_connection_create(dataBase)
 
@@ -127,3 +128,12 @@ def main():
                            """
     date = str(datetime.datetime.now())
     db_create_table(conn, sql_create_log_table)
+
+
+def main():
+    db = "E:\python_Projects\Mapper\Ild-Mapper\storage.db"
+    connection = db_connection_create(db)
+    db_destroy_function(connection)
+
+if __name__ == '__main__':
+    main()

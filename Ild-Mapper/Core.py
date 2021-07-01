@@ -63,7 +63,7 @@ class Interface(QtWidgets.QMainWindow,mapper_ui.Ui_MainWindow):
         map.save('stuff.html')
         
         web_view = QWebEngineView()
-        web_view.load(QUrl("E:/python_Projects/Mapper/stuff.html"))
+        web_view.load(QUrl("E:/python_Projects/Mapper/Ild-Mapper/stuff.html"))
         web_view.show()
         layout.addWidget(web_view)
 
